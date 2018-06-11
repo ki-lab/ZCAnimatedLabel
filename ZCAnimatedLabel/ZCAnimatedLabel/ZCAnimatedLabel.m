@@ -19,6 +19,8 @@
 @property (nonatomic, assign) BOOL animatingAppear; //we are during appear stage or not
 @property (nonatomic, strong) ZCCoreTextLayout *layoutTool;
 @property (nonatomic, assign) NSTimeInterval animationStarTime;
+@property (nonatomic, copy) void (^appearAnimationDidComplete)(void);
+@property (nonatomic, copy) void (^disappearAnimationDidComplete)(void);
 
 @end
 
@@ -84,6 +86,13 @@
     if (self.animationTime > self.animationDurationTotal) {
         self.displayLink.paused = YES;
         self.useDefaultDrawing = YES;
+        
+        if (self.animatingAppear && self.appearAnimationDidComplete) {
+            self.appearAnimationDidComplete();
+        }
+        else if (!self.animatingAppear && self.disappearAnimationDidComplete) {
+            self.disappearAnimationDidComplete();
+        }
     }
     else { //update text attributeds array
         
@@ -262,8 +271,12 @@
     [self setNeedsDisplay];
 }
 
-
 - (void) startAppearAnimation
+{
+    [self startAppearAnimationWithCompletion:nil];
+}
+
+- (void) startAppearAnimationWithCompletion:(void (^)(void))completion
 {
     self.animatingAppear = YES;
     self.animationTime = 0;
@@ -274,6 +287,11 @@
 }
 
 - (void) startDisappearAnimation
+{
+    [self startDisappearAnimationWithCompletion:nil];
+}
+
+- (void) startDisappearAnimationWithCompletion:(void (^)(void))completion
 {
     self.animatingAppear = NO;
     self.animationTime = 0;
