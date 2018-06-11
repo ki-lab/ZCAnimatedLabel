@@ -278,6 +278,7 @@
 
 - (void) startAppearAnimationWithCompletion:(void (^)(void))completion
 {
+    self.appearAnimationDidComplete = completion;
     self.animatingAppear = YES;
     self.animationTime = 0;
     self.useDefaultDrawing = NO;
@@ -293,6 +294,7 @@
 
 - (void) startDisappearAnimationWithCompletion:(void (^)(void))completion
 {
+    self.disappearAnimationDidComplete = completion;
     self.animatingAppear = NO;
     self.animationTime = 0;
     self.useDefaultDrawing = NO;
