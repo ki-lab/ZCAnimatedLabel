@@ -1,9 +1,5 @@
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wstrict-prototypes"
-
-#ifndef ZCHeaders_H
-#define ZCHeaders_H
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "ZCAnimatedLabel.h"
 #import "ZCCoreTextLayout.h"
@@ -19,7 +15,3 @@
 #import "ZCSpinLabel.h"
 #import "ZCThrownLabel.h"
 #import "ZCTransparencyLabel.h"
-
-#endif /* ZCHeaders_H */
-
-#pragma clang diagnostic pop

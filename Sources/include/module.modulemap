@@ -1,4 +1,4 @@
-module ZCAnimatedLabel{
-    header "ZCHeaders.h"
+module ZCAnimatedLabels {
+    header "ZCAnimatedLabels.h"
     export *
 }

@@ -3,19 +3,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "ZCAnimatedLabel",
+    name: "ZCAnimatedLabels",
     platforms: [
         .iOS(.v12)
     ],
     products: [
         .library(
-            name: "ZCAnimatedLabel",
-            targets: ["ZCAnimatedLabel"]
+            name: "ZCAnimatedLabels",
+            targets: ["ZCAnimatedLabels"]
         )
     ],
     targets: [
         .target(
-            name: "ZCAnimatedLabel",
+            name: "ZCAnimatedLabels",
             path: "Sources",
             publicHeadersPath: "include"
         )
