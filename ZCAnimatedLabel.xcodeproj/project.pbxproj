@@ -57,6 +57,8 @@
 		8B765D812EA24DD200059A27 /* ZCSpinLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSpinLabel.m; sourceTree = "<group>"; };
 		8B765D822EA24DD200059A27 /* ZCThrownLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCThrownLabel.m; sourceTree = "<group>"; };
 		8B765D832EA24DD200059A27 /* ZCTransparencyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTransparencyLabel.m; sourceTree = "<group>"; };
+		8BCD22762EA253F100FB43DE /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		8BCD22772EA253F100FB43DE /* ZCHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCHeaders.h; sourceTree = "<group>"; };
 		ABFDD8BC23EA1E23896DBE2C /* libPods-ZCMorphingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZCMorphingLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,8 @@
 		8B765D762EA24DD200059A27 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD22762EA253F100FB43DE /* module.modulemap */,
+				8BCD22772EA253F100FB43DE /* ZCHeaders.h */,
 				8B765D692EA24DD200059A27 /* ZCAnimatedLabel.h */,
 				8B765D6A2EA24DD200059A27 /* ZCCoreTextLayout.h */,
 				8B765D6B2EA24DD200059A27 /* ZCDashLabel.h */,

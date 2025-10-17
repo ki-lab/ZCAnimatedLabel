@@ -1,0 +1,4 @@
+module ZCAnimatedLabel{
+    header "ZCHeaders.h"
+    export *
+}
